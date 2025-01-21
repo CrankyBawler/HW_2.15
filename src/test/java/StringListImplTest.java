@@ -95,79 +95,79 @@ public class StringListImplTest {
        });
    }
 
-//   @Test
-//   public void removeForIndex() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void removeForIndex() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       String result = stringListImpl.remove(1);
-//       assertEquals("Item2", result);
+       int result = integerListImpl.remove(1);
+       assertEquals(2, result);
 
-//       String[] items = stringListImpl.getItems();
-//       assertEquals("Item1", items[0]);
-//       assertEquals("Item3", items[1]);
+       Integer[] items = integerListImpl.getItems();
+       assertEquals(1, items[0]);
+       assertEquals(3, items[1]);
 
-//       assertThrows(IllegalArgumentException.class, () -> {
-//           stringListImpl.remove(3);
-//       });
-//   }
+       assertThrows(IllegalArgumentException.class, () -> {
+           integerListImpl.remove(3);
+       });
+   }
 
-//   @Test
-//   public void contains() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void contains() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       assertTrue(stringListImpl.contains("Item1"));
-//       assertTrue(stringListImpl.contains("Item2"));
-//       assertTrue(stringListImpl.contains("Item3"));
-//       assertFalse(stringListImpl.contains("Item4"));
+       assertTrue(integerListImpl.contains(1));
+       assertTrue(integerListImpl.contains(2));
+       assertTrue(integerListImpl.contains(3));
+       assertFalse(integerListImpl.contains(4));
 
-//   }
+   }
 
-//   @Test
-//   public void indexOf() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void indexOf() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       assertEquals(0, stringListImpl.indexOf("Item1"));
-//       assertEquals(1, stringListImpl.indexOf("Item2"));
-//       assertEquals(2, stringListImpl.indexOf("Item3"));
-//       assertEquals(-1, stringListImpl.indexOf("Item4"));
-//   }
+       assertEquals(0, integerListImpl.indexOf(1));
+       assertEquals(1, integerListImpl.indexOf(2));
+       assertEquals(2, integerListImpl.indexOf(3));
+       assertEquals(-1, integerListImpl.indexOf(4));
+   }
 
-//   @Test
-//   public void lastIndexOf() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void lastIndexOf() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       assertEquals(2, stringListImpl.lastIndexOf("Item3"));
-//       assertEquals(1, stringListImpl.lastIndexOf("Item2"));
-//       assertEquals(0, stringListImpl.lastIndexOf("Item1"));
-//       assertEquals(-1, stringListImpl.lastIndexOf("Item4"));
+       assertEquals(2, integerListImpl.lastIndexOf(3));
+       assertEquals(1, integerListImpl.lastIndexOf(2));
+       assertEquals(0, integerListImpl.lastIndexOf(1));
+       assertEquals(-1, integerListImpl.lastIndexOf(4));
 
-//   }
+   }
 
-//   @Test
-//   public void get() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void get() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       assertEquals("Item1", stringListImpl.get(0));
-//       assertEquals("Item2", stringListImpl.get(1));
-//       assertEquals("Item3", stringListImpl.get(2));
-//       assertThrows(IllegalArgumentException.class, () -> {
-//           stringListImpl.get(-1);
-//       });
-//       assertThrows(IllegalArgumentException.class, () -> {
-//           stringListImpl.get(-3);
+       assertEquals(1, integerListImpl.get(0));
+       assertEquals(2, integerListImpl.get(1));
+       assertEquals(3, integerListImpl.get(2));
+       assertThrows(IllegalArgumentException.class, () -> {
+           integerListImpl.get(-1);
+       });
+       assertThrows(IllegalArgumentException.class, () -> {
+           integerListImpl.get(-3);
 
-//       });
-//   }
+       });
+   }
 
 //   @Test
 //   public void equals() {

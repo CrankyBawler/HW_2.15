@@ -47,7 +47,7 @@ public class IntegerListImpl implements IntegerList {
   }
 
   @Override
-  public Integer remove(int item) {
+  public Integer remove(Integer item) {
       int index = -1;
       for (int i = 0; i < size; i++) {
           if (items[i].equals(item)) {
@@ -64,68 +64,68 @@ public class IntegerListImpl implements IntegerList {
       return removerItem;
   }
 
-//  @Override
-//  public String remove(int index) {
-//      {
-//          if (index < 0 || index > size) {
+  @Override
+  public Integer remove(int index) {
+      {
+          if (index < 0 || index > size) {
 
 
-//              throw new IllegalArgumentException("Такого индекса массива не существует");
-//          }
-//          String removerItem = items[index];
-//          System.arraycopy(items, index + 1, items, index, size - index - 1);
-//          items[--size] = null;
+              throw new IllegalArgumentException("Такого индекса массива не существует");
+          }
+          Integer removerItem = items[index];
+          System.arraycopy(items, index + 1, items, index, size - index - 1);
+          items[--size] = null;
 
 
-//          return removerItem;
-//      }
-//  }
+          return removerItem;
+      }
+  }
 
 
-//  @Override
-//  public boolean contains(String item) {
-//      for (int i = 0; i < size; i++) {
-//          if (items[i].equals(item)) {
-//              return true;
-//          }
-//      }
-//      return false;
-//  }
+  @Override
+  public boolean contains(int item) {
+      for (int i = 0; i < size; i++) {
+          if (items[i].equals(item)) {
+              return true;
+          }
+      }
+      return false;
+  }
 
-//  @Override
-//  public int indexOf(String item) {
-//      for (int i = 0; i < size; i++) {
-//          if (items[i].equals(item)) {
-//              return i;
-//          }
+  @Override
+  public int indexOf(int item) {
+      for (int i = 0; i < size; i++) {
+          if (items[i].equals(item)) {
+              return i;
+          }
 
-//      }
-//      return -1;
-//  }
+      }
+      return -1;
+  }
 
-//  @Override
-//  public int lastIndexOf(String item) {
-//      for (int i = 0; i < size; i++) {
-//          if (items[i].equals(item)) {
-//              return i;
-//          }
+  @Override
+  public int lastIndexOf(int item) {
+      for (int i = 0; i < size; i++) {
+          if (items[i].equals(item)) {
+              return i;
+          }
 
-//      }
-//      return -1;
-//  }
+      }
+      return -1;
+  }
 
-//  @Override
-//  public String get(int index) {
-//      if (index < 0 || index >= size) {
-//          throw new IllegalArgumentException("Такого индекса не существует");
-//      }
-//      return items[index];
-//  }
+  @Override
+  public Integer get(int index) {
+      if (index < 0 || index >= size) {
+          throw new IllegalArgumentException("Такого индекса не существует");
+      }
+      return items[index];
+  }
 
-//  @Override
-//  public boolean equals(IntegerList otherList) {
-//      return Arrays.equals(this.toArray(), otherList.toArray());
-//  }
+  @Override
+  public boolean equals(IntegerList otherList) {
+      return Arrays.equals(this.toArray(), otherList.toArray());
+  }
 
 
 //  @Override
@@ -146,12 +146,12 @@ public class IntegerListImpl implements IntegerList {
 
 //  }
 
-//  @Override
-//  public String[] toArray() {
-//      String[] result = new String[size];
-//      System.arraycopy(items, 0, result, 0, size);
-//      return result;
-//  }
+  @Override
+  public Integer[] toArray() {
+      Integer[] result = new Integer[size];
+      System.arraycopy(items, 0, result, 0, size);
+      return result;
+  }
 
   public Integer[] getItems() {
       return Arrays.copyOf(items, size);
