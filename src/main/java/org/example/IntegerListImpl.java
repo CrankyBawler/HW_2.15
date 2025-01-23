@@ -128,23 +128,23 @@ public class IntegerListImpl implements IntegerList {
   }
 
 
-//  @Override
-//  public int size() {
+  @Override
+  public int size() {
 
-//      return size;
-//  }
+      return size;
+  }
 
-//  @Override
-//  public boolean isEmpty() {
+  @Override
+  public boolean isEmpty() {
 
-//      return size == 0;
-//  }
+      return size == 0;
+  }
 
-//  @Override
-//  public void clear() {
-//      size = 0;
+  @Override
+  public void clear() {
+      size = 0;
 
-//  }
+  }
 
   @Override
   public Integer[] toArray() {
@@ -157,17 +157,17 @@ public class IntegerListImpl implements IntegerList {
       return Arrays.copyOf(items, size);
   }
 
-//  public int getSize() {
-//      return size;
-//  }
+  public int getSize() {
+      return size;
+  }
 
 
-//  @Override
-//  public int hashCode() {
-//      int result = Objects.hash(size);
-//      result = 31 * result + Arrays.hashCode(items);
-//      return result;
-//  }
-//
+  @Override
+  public int hashCode() {
+      int result = Objects.hash(size);
+      result = 31 * result + Arrays.hashCode(items);
+      return result;
+  }
+
 }
 

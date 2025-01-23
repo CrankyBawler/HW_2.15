@@ -169,63 +169,63 @@ public class StringListImplTest {
        });
    }
 
-//   @Test
-//   public void equals() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void equals() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       stringListImpl1.add(0, "Item1");
-//       stringListImpl1.add(1, "Item2");
-//       stringListImpl1.add(2, "Item3");
+       integerListImpl1.add(0, 1);
+       integerListImpl1.add(1, 2);
+       integerListImpl1.add(2, 3);
 
-//       assertTrue(stringListImpl.equals(stringListImpl1));
-//       assertTrue(stringListImpl1.equals(stringListImpl));
+       assertTrue(integerListImpl.equals(integerListImpl1));
+       assertTrue(integerListImpl1.equals(integerListImpl));
 
-//   }
+   }
 
-//   @Test
+   @Test
 
-//   public void size() {
-//       assertEquals(0, stringListImpl.size());
+   public void size() {
+       assertEquals(0, integerListImpl.size());
 
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       assertEquals(3, stringListImpl.size());
+       assertEquals(3, integerListImpl.size());
 
-//   }
+   }
 
-//   @Test
-//   public void isEmpty() {
-//       assertTrue(stringListImpl.isEmpty());
+   @Test
+   public void isEmpty() {
+       assertTrue(integerListImpl.isEmpty());
 
-//       stringListImpl.add(0, "Item1");
-//       assertFalse(stringListImpl.isEmpty());
+       integerListImpl.add(0, 1);
+       assertFalse(integerListImpl.isEmpty());
 
-//   }
+   }
 
-//   @Test
-//   public void clear() {
-//       stringListImpl.add(0, "Item1");
-//       stringListImpl.add(1, "Item2");
-//       stringListImpl.add(2, "Item3");
+   @Test
+   public void clear() {
+       integerListImpl.add(0, 1);
+       integerListImpl.add(1, 2);
+       integerListImpl.add(2, 3);
 
-//       stringListImpl.clear();
+       integerListImpl.clear();
 
-//       assertEquals(0, stringListImpl.size());
-//   }
+       assertEquals(0, integerListImpl.size());
+   }
 
-//   @Test
-//   public void toArray() {
-//       assertEquals(0, stringListImpl.size());
-//       stringListImpl.add("Hello ");
-//       assertArrayEquals(new String[] {"Hello "}, stringListImpl.toArray());
-//       stringListImpl.add("World ");
-//       assertArrayEquals(new String[]{"Hello ", "World "}, stringListImpl.toArray());
-//       stringListImpl.add("!");
-//       assertArrayEquals(new String[]{"Hello ", "World ", "!"}, stringListImpl.toArray());
+   @Test
+   public void toArray() {
+       assertEquals(0, integerListImpl.size());
+       integerListImpl.add(1);
+       assertArrayEquals(new Integer[] {1}, integerListImpl.toArray());
+       integerListImpl.add(2);
+       assertArrayEquals(new Integer[]{1, 2}, integerListImpl.toArray());
+       integerListImpl.add(3);
+       assertArrayEquals(new Integer[]{1, 2, 3}, integerListImpl.toArray());
 
-//   }
+   }
 }
