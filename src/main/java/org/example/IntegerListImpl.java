@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.Arrays;
 import java.util.Objects;
-import java.util.Random;
 
 public class IntegerListImpl implements IntegerList {
     private Integer[] items;
@@ -82,12 +81,37 @@ public class IntegerListImpl implements IntegerList {
         }
     }
 
+    @Override
+    public void sortSelection(Integer[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int minElementIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minElementIndex]) {
+                    minElementIndex = j;
+                }
+            }
+            swapElements(array, i, minElementIndex);
+        }
+    }
 
     @Override
-    public boolean contains(int item) {
-        for (int i = 0; i < size; i++) {
-            if (items[i].equals(item)) {
+
+
+    public boolean contains(int[] arr, int element) {
+        int min = 0;
+        int max = arr.length - 1;
+
+        while (min <= max) {
+            int mid = (min + max) / 2;
+
+            if (element == arr[mid]) {
                 return true;
+            }
+
+            if (element < arr[mid]) {
+                max = mid - 1;
+            } else {
+                min = mid + 1;
             }
         }
         return false;
@@ -168,6 +192,12 @@ public class IntegerListImpl implements IntegerList {
         int result = Objects.hash(size);
         result = 31 * result + Arrays.hashCode(items);
         return result;
+    }
+
+    private static void swapElements(Integer[] arr, int indexA, int indexB) {
+        int tmp = arr[indexA];
+        arr[indexA] = arr[indexB];
+        arr[indexB] = tmp;
     }
 
 

@@ -38,7 +38,7 @@ public interface IntegerList {
 
     // Проверка на существование элемента.
     // Вернуть true/false;
-    boolean contains(int item);
+    boolean contains(int[] arr, int element);
 
     // Поиск элемента.
     // Вернуть индекс элемента
@@ -76,4 +76,7 @@ public interface IntegerList {
     // из строк в списке
     // и вернуть его.
     Integer[] toArray();
+
+
+    void sortSelection(Integer[] array);
 }
